@@ -1,0 +1,63 @@
+body{
+  font-family: times;
+}
+h1{
+  font-family:futura;
+}
+h2{
+  font-family: futura;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+header{
+
+}
+header img{
+  width:300px;
+}
+nav{
+  position: absolute;
+  top:90px;
+  left:300px;
+}
+nav a:link{
+  text-decoration: none;
+  color: #000;
+}
+nav a:visited{
+  text-decoration: none;
+  color:#000;
+}
+nav a:hover{
+  text-decoration: underline;
+  color:#000;
+}
+nav a:active{
+  text-decoration: underline;
+  color:pink;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  padding-right: 50px;
+  display: inline;
+  color:#000;
+  font-size: 18px;
+  text-transform: uppercase;;
+  font-family: futura;
+}
+section{
+  padding-left: 50px;
+}
+section img{
+  width:600px;
+  position:absolute;
+  right:100px;
+  top:300px;
+}
+.column{
+  column-count: 2;
+  width:800px;
+}
