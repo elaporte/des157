@@ -19,7 +19,7 @@
     // (mouse presses in this case).
       //line(mouseX, 0, mouseX, 250);
 
-    frameRate(7);
+    frameRate(20);
     smooth();
 
     //Fade out
