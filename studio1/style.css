@@ -9,15 +9,15 @@ body{
 a{
   color:#000;
 }
-li a:link{
+a:link{
   text-decoration: none;
   color:#000;
 }
-li a:visited{
+a:visited{
   text-decoration: none;
   color: #000;
 }
-li a:hover{
+a:hover{
   text-decoration: underline;
   color:#000;
 }
@@ -69,16 +69,4 @@ footer{
 }
 footer a{
   padding-right: 100px;
-}
-footer a:link{
-  text-decoration: none;
-  color:#000;
-}
-footer a:visited{
-  text-decoration: none;
-  color: #000;
-}
-footer a:hover{
-  text-decoration: underline;
-  color:#000;
 }
