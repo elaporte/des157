@@ -33,3 +33,23 @@ p{
   column-count: 2;
   width:800px;
 }
+footer{
+  position: fixed;
+  bottom: 25px;
+  padding-left: 40%;
+  font-family: futura;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+footer a{
+  color: #000;
+  text-decoration: none;
+  padding-left: 50px;
+}
+footer a:link{
+}
+footer a:visited{
+}
+footer a:hover{
+  text-decoration: underline;
+}
