@@ -29,13 +29,13 @@
 
     //Change colors
     var r = random(100,255);
-    fill(r,9,100);
-    noStroke();
+    noStroke(r,9,100,75);
+    noFill();
 
     //Ripples
-    ellipseMode(CENTER);
+    rectMode(CENTER);
     r+=5;
-    ellipse(mouseX,mouseY,r,r);
+    rect(mouseX,mouseY,r,r);
 
     // Reset y back to 0 when it gets to the bottom of window
     if (r > width+150) {
