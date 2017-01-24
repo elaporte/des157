@@ -19,7 +19,7 @@
     // (mouse presses in this case).
       //line(mouseX, 0, mouseX, 250);
 
-    frameRate(20);
+    frameRate(15);
     smooth();
 
     //Fade out
@@ -30,6 +30,7 @@
     //Change colors
     var r = random(100,255);
     stroke(r,9,100,75);
+    strokeWeight(3);
     noFill();
 
     //Ripples
