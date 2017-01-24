@@ -29,7 +29,7 @@
 
     //Change colors
     var r = random(100,255);
-    noStroke(r,9,100,75);
+    noStroke(r,9,100);
     noFill();
 
     //Ripples
