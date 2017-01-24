@@ -33,7 +33,6 @@
     noFill();
 
     //Ripples
-    rectMode(CENTER);
     r+=5;
     rect(mouseX,mouseY,r,r);
 
