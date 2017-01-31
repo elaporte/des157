@@ -22,8 +22,22 @@ li{
   text-transform: uppercase;;
   font-family: futura;
 }
-section{
+a{
+  color: #000;
+  text-decoration: none;
 }
+a:link{
+  font-weight: bold;
+  font-style: italic;
+}
+a:visited{
+  color: #000;
+}
+a:hover{
+  text-decoration: underline;
+}
+#blog1{clear: both;}
+#blog2{clear: both;}
 section img{
   width:600px;
   padding-left: 100px;
@@ -34,8 +48,10 @@ p{
   width:800px;
 }
 footer{
+  clear: both;
   position: fixed;
-  bottom: 25px;
+  top: 25px;
+  right:50px;
   padding-left: 40%;
 }
 footer a{
