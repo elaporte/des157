@@ -1,0 +1,55 @@
+<!--NOTE: Replace all of the uppercase text from glenda with your own custom content-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ch 13: Cat's Hat Exercise</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            color: white;
+            background-color: #333;
+            font-size: 11px;
+            margin: 24px;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chapter 13: The Cat's Hat</h1>
+    <h2>Watch the hat circle the cat!</h2>
+
+    <!--add images-->
+    <img src="img/cat.png" id="cat" style="position: absolute">
+    <img src="img/hat.png" id="hat" style="position: absolute">
+
+    <script>
+    var cat = document.querySelector("#cat");
+    var hat = document.querySelector("#hat");
+
+    var angle = 0, lastTime = null;
+        function animate(time) {
+          if (lastTime != null)
+          angle += (time - lastTime) * 0.002;
+          lastTime = time;
+          hat.style.top = (Math.sin(angle) * 300 + 300) + "px";
+          hat.style.left = (Math.cos(angle) * 300 + 600) + "px";
+          catAngle = angle + Math.PI;
+          cat.style.top = (Math.sin(catAngle) * 100 + 200) + "px";
+          cat.style.left = (Math.cos(catAngle) * 100 + 500) + "px";
+          requestAnimationFrame(animate);
+          }
+          requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
