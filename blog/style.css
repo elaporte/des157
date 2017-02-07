@@ -11,16 +11,13 @@ h2{
   font-size: 14px;
   letter-spacing: 1px;
 }
-ul{
-  list-style-type: none;
+ol{
+  margin-left: 410px;
 }
 li{
-  padding-right: 50px;
-  display: inline;
   color:#000;
-  font-size: 18px;
-  text-transform: uppercase;;
-  font-family: futura;
+  font-size: 14px;
+  width: 350px;
 }
 a{
   color: #000;
@@ -38,6 +35,7 @@ a:hover{
 }
 #blog1{clear: both;}
 #blog2{clear: both;}
+#blog3{clear: both;}
 section img{
   width:600px;
   padding-left: 100px;
