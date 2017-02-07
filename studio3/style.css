@@ -1,12 +1,11 @@
 body {
   background-image: url("postcard-color.jpeg");
-  background-color: gray;
+  background-color: #0f98ab;
   background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 800px;
+  background-position:top left;
+  background-size: 700px;
   margin: auto;
-  font-family: 'Indie Flower', cursive;
-  color: lightblue;
+  color: #fff;
 }
 
 header {
@@ -17,46 +16,53 @@ header {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 60px;
   padding-top: 85px;
-  padding-left: 900px;
+  padding-left: 780px;
   width: 600px;
   line-height: 40px;
+  font-family: 'Barrio', cursive;
+}
+h2{
+  width: 600px;
+  padding-left: 780px;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #amsterdam {
   position: absolute;
-  top: 508px;
-  left: 58px;
-  width: 220px;
+  top: 440px;
+  left: 50px;
+  width: 185px;
 }
 
 #budapest {
   position: absolute;
-  top: 655px;
-  left: 430px;
-  width: 315px;
+  top: 570px;
+  left: 375px;
+  width: 275px;
 }
 
 #dublin {
   position: absolute;
-  top: 818px;
-  left: 58px;
-  width: 206px;
+  top: 715px;
+  left: 50px;
+  width: 185px;
 }
 
 #dubrovnik {
   position: absolute;
-  top: 180px;
-  left: 57px;
-  width: 230px;
+  top: 158px;
+  left: 50px;
+  width: 200px;
 }
 
 #valencia {
   position: absolute;
-  left: 546px;
-  top: 205px;
-  width: 194px;
+  left: 480px;
+  top: 180px;
+  width: 167px;
 }
 
 img:hover {
@@ -65,17 +71,17 @@ img:hover {
 
 section {
   position: absolute;
-  top: 500px;
-  left:900px;
+  top: 460px;
+  left:780px;
   color: white;
-  background-color: gray;
+  background-color:none;
   width: 380px;
   display: none;
   opacity: .9;
 }
 
 div {
-  width: 380px;
+  width: 600px;
   color: white;
   display: none;
   position: absolute;
@@ -89,6 +95,7 @@ div p {
   line-height: 25px;
   font-size: 20px;
   padding-top: 20px;
+  font-family: 'Raleway', sans-serif;
 }
 
 button {
@@ -96,7 +103,7 @@ button {
   border: none;
   border-radius: 50px;
   font-size: 20px;
-  background-color: lightblue;
+  background-color: #fff;
   position: relative;
   clear: both;
 }
@@ -104,7 +111,7 @@ button {
 footer {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 100px;
   height: 50px;
 }
 
@@ -112,6 +119,7 @@ footer a {
   text-decoration: none;
   font-size: 16px;
   padding-left: 20px;
+  font-family: 'Raleway', sans-serif;
 }
 
 footer a:hover {
@@ -122,85 +130,3 @@ footer a:visited {
   text-decoration: none;
   color: lightblue;
 }
-/*
-@media (max-width: 1024px) {
-  body {
-    background-size: 1024px;
-    width: 1024px;
-    min-height: 600px;
-  }
-
-  header {
-    position: absolute;
-    left: 150px;
-    width: 800px;
-    height: 75px;
-  }
-
-  h1 {
-    font-size: 43px;
-    padding-top: 70px;
-  }
-
-  #amsterdam {
-    width: 96px;
-    top: 333px;
-    left: 788px;
-  }
-
-  #budapest {
-    width: 448px;
-    top: 387px;
-    left: 388px;
-  }
-
-  #dublin {
-    width: 29px;
-    top: 359px;
-    left: 375px;
-  }
-
-  #dubrovnik {
-    width: 137px;
-    top: 447px;
-    left: 190px;
-  }
-
-  #valencia {
-    width: 649px;
-    left: 0;
-    top: 620px;
-  }
-
-  section {
-    width: 1024px;
-    height: 900px;
-  }
-
-  div {
-    left: 15%;
-  }
-
-  button {
-    right: 10%;
-  }
-
-
-  footer {
-    width: 1024px;
-    top: 750px;
-    height: 50px;
-    padding-bottom: 50px;
-  }
-
-  footer p {
-    text-align: left;
-    padding-left: 50px;
-  }
-
-  footer a {
-    font-size: 25px;
-  }
-
-
-}*/

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 //declare image variable
 var img = document.getElementsByTagName('img');
 //var background = document.bgColor('background-color');
-//var bgcolorlist = ["#ff8c7b", "#c3cd65", "#0f98ab", "#ff8247", "#f6cf46", "#d73d4e"]
+//var backgColor = ["#ff8c7b", "#c3cd65", "#0f98ab", "#ff8247", "#f6cf46", "#d73d4e"]
 
 // declare all png variables
 var amsterdam = document.getElementById('amsterdam');
@@ -23,11 +23,6 @@ var valenciaDesc = document.getElementById('valenciaDesc');
 // delcare close variable
 var close = document.getElementById('close');
 
-/* make background color rotate on click
-bgcolorlist.addEventListener('click', function()
-{
-  bgcolorlist.body.style.background=bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)]
-}*/
 
 // make all the functions for hovering effects
 amsterdam.addEventListener('mouseover', function()
