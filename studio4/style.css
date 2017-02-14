@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    position: relative;
+    width: 1400px;
+    margin: auto;
+    background-color: #990033;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+}
+
+.tip {
+    width: 250px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #ffffcc;
+    opacity: 0;
+    font-family: times;
+    color: #ff3366;
+    text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  margin: 100px 0px 0px 0px;
+}
+
+.toptip {
+    width: 400px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: white;
+    opacity: 0;
+    font-family: times;
+    color: #990033;
+    text-align: center;
+}
+figure{
+  padding-top: 50px;
+  margin-left: 10px;
+  float:left;
+}
+
+img {
+  opacity: 0.8;
+  padding-bottom: 15px;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+
+#events {
+	position: relative;
+	display: block;
+	margin: 30px;
+	width: 1250px;
+}
+
+p {
+  padding-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*.tip {
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	padding: 15px;
+	border-radius: 10px;
+	border-right: 2px solid rgba(0,0,0,.1);
+	border-bottom: 2px solid rgba(0,0,0,.1);
+	background: #fff;
+}
+
+.tip::before {
+	content: "";
+	position: absolute;
+	left: 15px;
+	top: -10px;
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #fff;
+	border-top: 0;
+}*/
+
+#gradcount{
+  text-align: center;
+  clear: both;
+  font-size: 60px;
+  padding-top: 40px;
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+}
+
+}
+
+footer {
+    padding: 70px;
+    font-size: 16px;
+    top: 800px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #8FAD6F;
+}
+
+a:visited {
+    color: #82A3A1;
+}
+
+a:hover {
+    color: #396443;
+}
+
+a:active {
+    color: white;
+}
