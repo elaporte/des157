@@ -58,6 +58,19 @@ a:hover{
 section{
     padding-bottom: 35px;
 }
+#blog5 a{
+  text-decoration: underline;
+  font-style: normal;
+}
+#blog5 a:link{
+  color: #002855;
+}
+#blog5 a:hover{
+  color: #5bbad6;
+}
+#blog5 a:visited{
+  color: #002855;
+}
 section img{
   width:600px;
   display: block;
