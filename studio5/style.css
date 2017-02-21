@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+body {
+    background-color: #002855;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    text-align: center;
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
+    color: #DAAA00;
+}
+h2{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  color: #DAAA00;
+}
+
+#map{
+    border: solid 5px #DAAA00;
+    height: 600px;
+    width: 800px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    font-family: futura;
+    font-size: 14px;
+    color: #DAAA00;
+    position: fixed;
+    bottom: 10px;
+    left: 40%;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: #DAAA00;
+}
+footer a:link{
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer a:visited{
+  text-decoration: none;
+}
+
+footer li {
+    display: inline;
+}
