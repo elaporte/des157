@@ -59,6 +59,7 @@ section{
 div{
   float: left;
   width: 250px;
+  padding-bottom: 150px;
 }
 footer{
   clear:both;
