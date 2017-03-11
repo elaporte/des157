@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <script src="script.js" charset="utf-8"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <title>Interactive Prototype 1</title>
+  </head>
+  <body>
+    <main>
+      <nav></nav>
+      <h1>Out of the Shadows</h1>
+
+    <!--User text input for date, time, location-->
+    <article id='upperInfo'>
+      <form name="f">
+      <section class="td">
+        <label id='dateLabel'>date</label>
+        <input id='date' type="text" name="date">
+      </section>
+       <section class='td'>
+         <label id='timeLabel'>time</label>
+         <input id='time' type="text" name="time">
+      </section>
+  		<section class='td'>
+        <label id='locLabel'>location</label>
+        <input id='loc' type="text" name="location">
+      </section>
+    </form>
+  </article>
+
+    <!--User selects categories-->
+    <article id='categories'>
+      <section class="cat" id='catcall'><p>catcall</p></section>
+      <section class="cat" id='rape'><p>rape/<br/>assault</p></section>
+      <section class="cat" id='stalk'><p>stalking</p></section>
+      <section class="cat" id='grope'><p>groping/<br/>touching</p></section>
+      <section class="cat" id='pics'><p>taking<br/>pictures</p></section>
+      <section class="cat" id='exposure'><p>indecent<br/>exposure</p></section>
+      <section class="cat" id='stare'><p>staring</p></section>
+      <section class="cat" id='invite'><p>sexual<br/>invites</p></section>
+      <section class="cat" id='other'><p>other</p></section>
+    </article>
+
+    <!--User text and submit-->
+    <article id="lowerInfo">
+      <form name="g">
+      <section class="bottom" id='write'>
+        <label id='descLabel'>optional description</label>
+        <input id='desc' type="text" name="date">
+      </section>
+      <section class="bottom" id='send'>
+        <label></label>
+      <input type="submit" value="submit"/>
+      </section>
+      </form>
+    </article>
+
+    <section id="results">
+  		<p id="myMsg" class="hidden"></p>
+  	</section>
+    </main>
+
+  </body>
+</html>
