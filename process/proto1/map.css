@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height:667px;
+  width:375px;
+  border: solid;
+  margin: auto;
+}
+#map{
+  height: 600px;
+  width:372px;
+  border: solid;
+  margin: auto;
+  margin-top: 20px;
+}

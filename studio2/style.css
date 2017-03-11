@@ -1,0 +1,118 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body {
+  height: 1000px;
+  background: linear-gradient(195deg, #000, gray);
+  /*background-color:antiquewhite;*/
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+h1, article{
+  margin-left:12px;
+}
+h1 {
+  position:relative;
+  top:30px;
+  left:100px;
+  z-index:1;
+  color: #fff;
+  font-family: 'Satisfy', cursive;
+  font-size: 72px;
+  font-weight: normal;
+}
+article {
+  position:relative;
+  top:25px;
+  width:80%;
+  padding:24px;
+  color:#fff;
+  letter-spacing: 1px;
+  font-family: 'Teko', sans-serif;
+  font-size: 24px;
+}
+div {
+  margin: 5px;
+}
+label{
+  width:1.5in;
+  text-align:right;
+  display:inline-block;
+  padding-right:20px;
+}
+input[type="text"]{
+  width:250px;
+  padding:8px;
+  border:none; /*remove default*/
+  border-radius:5px;
+  border-bottom:5px #79acad solid;
+  border-right:5px #79acad solid;
+  background-color:#98d8d9;
+  font-size:14px;
+  color: #fff;
+}
+input[type=text]:focus {
+  background-color: #fff;
+  color:black;
+}
+input[type="reset"], input[type="submit"] {
+  position:relative;
+  left:1.77in;
+  top:14px;
+  padding:12px;
+  border:none;
+  border-radius:3px;
+  border-bottom:4px #5b8182 solid;
+  background-color:#2d4041;
+  color:#fff;
+  font-size:24px;
+  letter-spacing: 0.5px;
+  font-family: 'Satisfy', cursive;
+}
+img{
+  margin: auto;
+  display: block;
+  margin-top: -30%;
+}
+p{
+  position: absolute;
+  left:72%;
+  top:150px;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  width:400px;
+  font-family: 'Teko', sans-serif;
+}
+/*.hidden {
+display: none;
+visibility: none;
+opacity: 0;
+pointer-events: none;
+}*/
+footer{
+  position: fixed;
+  bottom: 20px;
+  left:35%;
+  font-family: 'Satisfy', cursive;
+  color: #fff;
+}
+footer a{
+  padding-right: 70px;
+  font-size: 16px;
+  font-family: 'Satisfy', cursive;
+  color:#fff;
+}
+footer a:link{
+  text-decoration: none;
+}
+footer a:visited{
+  text-decoration: none;
+}
+footer a:hover{
+  text-transform: uppercase;
+  font-weight: bold;
+}

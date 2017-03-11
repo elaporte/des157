@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height:667px;
+  width:375px;
+  border: solid;
+  margin: auto;
+}
+nav{
+  width: 50px;
+  height: 50px;
+  border:solid;
+  border-color: #4cd4e1;
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  background-color: #4cd4e1;
+}
+h1{
+  text-transform: uppercase;
+  font-size: 35px;
+  font-family: 'Covered By Your Grace', cursive;
+  position: relative;
+  top: -60px;
+  left:100px;
+  color: #4cd4e1;
+}
+section{
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+#upperInfo{
+  margin-top: -20px;
+}
+.td{
+  width: 130px;
+  height: 30px;
+  border: solid;
+  border-radius: 5px;
+  border-color: #4cd4e1;
+  color: #000;
+}
+#date{
+  position: relative;
+  left:40px;
+}
+#time{
+  position: relative;
+  left: 195px;
+  top: -36px;
+}
+#location{
+  width: 285px;
+  position: relative;
+  left:40px;
+  top:-30px;
+}
+
+#categories{
+  margin-left: 30px;
+  color: #fff;
+}
+.cat{
+  width: 85px;
+  height: 85px;
+  border: solid;
+  border-radius: 8px;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #4cd4e1;
+}
+
+/*#write{
+  width: 300px;
+  height: 80px;
+  border: solid;
+  border-radius: 8px;
+  border-color: #4cd4e1;
+  color: #000;
+  margin: auto;
+}*/
+#send{
+  width: 100px;
+  height: 50px;
+  border: solid;
+  border-radius: 8px;
+  background-color: #4cd4e1;
+  border-color: #4cd4e1;
+  margin: auto;
+}

@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height:667px;
+  width:375px;
+  border: solid;
+  margin: auto;
+}
+nav{
+  width: 50px;
+  height: 50px;
+  border:solid;
+  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+h1{
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: sans-serif;
+  position: relative;
+  top: -50px;
+  left:100px;
+}
+section{
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+#upperInfo{
+  margin-top: -20px;
+}
+.td{
+  width: 130px;
+  height: 30px;
+  border: solid;
+  border-radius: 5px;
+}
+#date{
+  position: relative;
+  left:40px;
+}
+#time{
+  position: relative;
+  left: 195px;
+  top: -36px;
+}
+#location{
+  width: 285px;
+  position: relative;
+  left:40px;
+  top:-30px;
+}
+
+#categories{
+  margin-left: 30px;
+}
+.cat{
+  width: 85px;
+  height: 85px;
+  border: solid;
+  border-radius: 8px;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#buttons{
+  margin-left: 40px;
+}
+.go{
+  width: 125px;
+  height: 60px;
+  border: solid;
+  border-radius: 8px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 30px;
+}

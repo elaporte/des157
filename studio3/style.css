@@ -1,0 +1,132 @@
+body {
+  background-image: url("postcard-color.jpeg");
+  background-color: #0f98ab;
+  background-repeat: no-repeat;
+  background-position:top left;
+  background-size: 700px;
+  margin: auto;
+  color: #fff;
+}
+
+header {
+  position: absolute;
+  left: 185px;
+  width: 800px;
+  height: 150px;
+}
+
+h1 {
+  font-size: 60px;
+  padding-top: 85px;
+  padding-left: 780px;
+  width: 600px;
+  line-height: 40px;
+  font-family: 'Barrio', cursive;
+}
+h2{
+  width: 600px;
+  padding-left: 780px;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#amsterdam {
+  position: absolute;
+  top: 440px;
+  left: 50px;
+  width: 185px;
+}
+
+#budapest {
+  position: absolute;
+  top: 570px;
+  left: 375px;
+  width: 275px;
+}
+
+#dublin {
+  position: absolute;
+  top: 715px;
+  left: 50px;
+  width: 185px;
+}
+
+#dubrovnik {
+  position: absolute;
+  top: 158px;
+  left: 50px;
+  width: 200px;
+}
+
+#valencia {
+  position: absolute;
+  left: 480px;
+  top: 180px;
+  width: 167px;
+}
+
+img:hover {
+  filter: brightness(150%);
+}
+
+section {
+  position: absolute;
+  top: 460px;
+  left:780px;
+  color: white;
+  background-color:none;
+  width: 380px;
+  display: none;
+  opacity: .9;
+}
+
+div {
+  width: 600px;
+  color: white;
+  display: none;
+  position: absolute;
+}
+
+div img {
+  display: none;
+}
+
+div p {
+  line-height: 25px;
+  font-size: 20px;
+  padding-top: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: #fff;
+  position: relative;
+  clear: both;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  height: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:visited {
+  text-decoration: none;
+  color: lightblue;
+}
