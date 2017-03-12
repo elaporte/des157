@@ -2,11 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="map.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="map.js"></script>
     <title>Interactive Prototype 3 Map</title>
   </head>
   <body>
+    <main>
+      <h1>Out of the Shadows</h1>
+      <div id="map"></div>
 
+      <!--https://www.w3schools.com/tags/canvas_arc.asp-->
+      <canvas id="myCanvas" width="300" height="150"></canvas>
+
+      <footer>
+        <a class='tabs' id='reportTab' href="report.html"><img src="edit.png" alt="Report" width='30'></a>
+        <a class='tabs' id='mapTab' href="#"><img src="placeholder.png" alt="Map" width='30'></a>
+        <a class='tabs' id='settingsTab' href="settings.html"><img src="settings.png" alt="Settings" width='30'></a>
+      </footer>
+      <script>
+        function initMap() {
+          var uluru = {lat: 38.53769, lng: -121.76777};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: uluru
+          });
+          // var marker = new google.maps.Marker({
+          //   position: uluru,
+          //   map: map
+          // });
+        }
+
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap">
+      </script>
+    </main>
   </body>
 </html>

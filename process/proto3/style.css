@@ -15,143 +15,34 @@ main{
   border-color: #fff;
   margin: auto;
   margin-top: 118px;
+  background-image: url(loading2.png);
+  background-size: 375px;
 }
-nav{
-  width: 50px;
-  height: 50px;
-  border:solid;
-  border-color: #4cd4e1;
-  border-radius: 5px;
-  margin: 10px 10px 10px 10px;
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: sans-serif;
-  background-color: #4cd4e1;
-}
-h1{
-  text-transform: uppercase;
-  font-size: 35px;
-  font-family: 'Covered By Your Grace', cursive;
-  position: relative;
-  top: -60px;
-  left:80px;
-  color: #4cd4e1;
-}
-section p{
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
-}
-
-#upperInfo{
-  margin-top: -20px;
-}
-/*.td{
-  width: 130px;
-  height: 30px;
-  border: solid;
-  border-radius: 5px;
-  border-color: #4cd4e1;
-  color: #000;
-}*/
-article{
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-}
-input[type="text"]{
-  width:100px;
-  padding:8px;
-  border-radius:5px;
-  border:solid;
-  border-color: #4cd4e1;
-  font-size:14px;
-  color: #000;
-}
-#loc[type="text"]{
-  width: 235px;
-}
-#dateLabel{
-  position: relative;
-  left: 60px;
-  top:-30px;
-}
-#date{
-  position: relative;
-  left:30px;
-  top:0px;
-}
-#timeLabel{
-  position: relative;
-  left: 200px;
-  top:-70px;
-}
-#time{
-  position: relative;
-  left: 165px;
-  top: -39px;
-}
-#locLabel{
-  position: relative;
-  left: 60px;
-  top:-50px;
-}
-#loc{
-  position: relative;
-  left:10px;
-  top:-20px;
-}
-
-#categories{
-  margin-left: 30px;
-  margin-top: -10px;
+h2{
+  font-size: 18px;
+  font-family: 'Raleway', san-serif;
+  font-weight: 400;
   color: #fff;
+  width: 280px;
+  margin-left: 50px;
+  margin-top:380px;
+  margin-bottom: 60px;
 }
-.cat{
-  width: 85px;
-  height: 85px;
-  border: solid;
-  border-radius: 8px;
-  float: left;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  background-color: #4cd4e1;
-}
-.cat p{
-  margin-top: 30px;
-  font-weight: 700;
-}
-
-.bottom{
-  clear: both;
-}
-#desc[type="text"]{
-  width: 265px;
-  height: 40px;
-  font-size: 10px;
-}
-#descLabel{
-  position: relative;
-  top:-5px;
-  left:45px;
-}
-#desc{
-  position: relative;
-  top:0px;
-  left:45px;
-}
-input[type="submit"] {
-  padding:12px;
-  border:none;
-  border-radius:3px;
-  background-color: #4cd4e1;
-  color:#fff;
-  font-size:14px;
-  letter-spacing: 0.5px;
+.button{
+  padding: 15px 30px 15px 30px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  margin-top: 10px;
-  position: relative;
-  left:150px;
+  text-transform: uppercase;
+  color: #328c94;
+  background-color: #fff;
+  font-size: 30px;
+  border-radius: 8px;
+  border: solid;
+  border-width: 2px;
+  border-left: gray;
+  border-top: gray;
+}
+a{
+  text-decoration: none;
+  margin-left: 135px;
 }

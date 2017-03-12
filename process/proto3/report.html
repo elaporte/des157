@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="report.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<script charset="utf-8" src="report.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js">
+	</script>
+	<title>Interactive Prototype 3 Reporting</title>
+</head>
+<body>
+	<main>
+
+		<h1>Out of the Shadows</h1><!--User text input for date, time, location-->
+
+		<!--User selects categories-->
+		<article id='categories'>
+			<button class="button" id="catcall">catcall</button>
+			<button class="button" id="rape">rape/<br>assault</button>
+			<button class="button" id="stalk">stalking</button>
+			<button class="button" id="grope">groping/<br>touching</button>
+			<button class="button" id="pics">taking<br>pictures</button>
+			<button class="button" id="exposure">indecent<br>exposure</button>
+			<button class="button" id="stare">staring</button>
+			<button class="button" id="invite">sexual<br>invites</button>
+			<button class="button" id="other">other</button>
+		</article>
+
+		<article id='upperInfo'>
+			<form name="f">
+				<section class="td">
+          <input id='date' name="userDate" type="text" placeholder="date" required>
+				</section>
+				<section class='td'>
+          <input id='time' name="userTime" type="text" placeholder="time" required>
+				</section>
+				<section class='td'>
+          <input id='loc' name="userLocation" type="text" placeholder="location" required>
+				</section>
+        <section class="bottom" id='write'>
+          <input id='desc' name="description" type="text" placeholder="optional description">
+        </section>
+        <section class="bottom" id='send'>
+          <input type="submit" value="submit"/>
+        </section>
+      </form>
+    </article>
+		<footer>
+			<a class='tabs' id='reportTab' href="#"><img src="edit.png" alt="Report" width='30'></a>
+			<a class='tabs' id='mapTab' href="map.html"><img src="placeholder.png" alt="Map" width='30'></a>
+			<a class='tabs' id='settingsTab' href="settings.html"><img src="settings.png" alt="Settings" width='30'></a>
+		</footer>
+	</main>
+</body>
+</html>

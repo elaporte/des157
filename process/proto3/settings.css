@@ -28,20 +28,33 @@ h1 {
   padding: 10px 0px 10px 0px;
   color: #fff;
 }
-#map{
-    height: 545px;
-    width: 379px;
-    background-color: gray;
-    margin: auto;
+
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #4cd4e1;
 }
-canvas{
-  position: relative;
-  top:-160px;
-  left:-40px;
+#buttons{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+button.active {
+background-color: #ea0000;
+color: #fff;
+}
+button{
+  padding: 15px 15px 15px 15px;
+  border-radius: 8px;
+  background-color: #4cd4e1;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
 }
 footer{
   position: relative;
-  bottom: 145px;
+  bottom: -318px;
   left:2px;
 }
 #reportTab{
@@ -49,10 +62,10 @@ footer{
 }
 #mapTab{
   padding:25px 46px 5px 46px;
-  background-color:#328c94;
 }
 #settingsTab{
   padding:25px 46px 5px 46px;
+  background-color:#328c94;
 }
 .tabs{
   background-color:#4cd4e1;

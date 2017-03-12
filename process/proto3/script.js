@@ -15,14 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
       var database = firebase.database();
       firebase.initializeApp(config);
 
-    var cat = addEventListener.getElementsByClassName('cat');
-    cat.addEventListener('click', function(){
-      cat.style.backgroundColor = "#328c94";
-    });
+      var button = document.querySelector('button');
+      button.onclick = function () {
+        this.style.backgroundColor = 'blue';
+      };
 
-    console.log('still working');
-    return false;
-
+    }
 // Public access to data
     {
       "rules": {
