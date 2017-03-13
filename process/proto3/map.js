@@ -2,6 +2,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     console.log('Icons made by http://www.freepik.com. Freepik from www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/ Creative Commons BY 3.0 CC 3.0 BY');
 
+    var go = document.getElementById("go");
+    var start = document.getElementById("start");
+    var mapPage = document.getElementById('mapPage');
+    go.addEventListener("click", function(event) {
+        start.style.display = "none";
+        mapPage.style.display = "block";
+    });
+
+
+
+
+
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.beginPath();
@@ -16,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     if ("geolocation" in navigator) {
         console.log('geolocation is available');
-        navigator.geolocation.getCurrentPosition(success, error, options);
+        navigator.geolocation.getCurrentPosition(success);
 
     } else {
         console.log('geolocation IS NOT available');
@@ -34,5 +46,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
         // img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
     };
-
 });

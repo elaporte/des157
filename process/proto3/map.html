@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="map.css">
-    <script type="text/javascript" src="map.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap">
-    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap"></script>
+
+
+
     <title>Interactive Prototype 3 Map</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <main>
-      <h1>Out of the Shadows</h1>
-      <div id="map"></div>
+        <aside id="start" style="display: none;">
+            <h2 id="startInfo">Create a safer community by anonymously reporting a spectrum of sexual assault that helps you and people around you stay safe.</h2>
+            <button type="button" class="button" id="go">GO</button>
+        </aside>
 
-      <!--https://www.w3schools.com/tags/canvas_arc.asp-->
-      <canvas id="myCanvas" width="300" height="150"></canvas>
+        <!-- <section id="mapPage" style="display: none;"> -->
+          <section id="mapPage">
+            <h1 id="title">Out of the Shadows</h1>
+            <div id="map"></div>
 
-      <footer>
-        <a class='tabs' id='reportTab' href="report.html"><img src="edit.png" alt="Report" width='30'></a>
-        <a class='tabs' id='mapTab' href="#"><img src="placeholder.png" alt="Map" width='30'></a>
-        <a class='tabs' id='settingsTab' href="settings.html"><img src="settings.png" alt="Settings" width='30'></a>
-      </footer>
+            <!--https://www.w3schools.com/tags/canvas_arc.asp-->
+            <canvas id="myCanvas" width="300" height="150"></canvas>
 
+            <footer>
+                <a class='tabs' id='reportTab' href="report.html"><img src="edit.png" alt="Report" width='30'></a>
+                <a class='tabs' id='mapTab' href="#"><img src="placeholder.png" alt="Map" width='30'></a>
+                <a class='tabs' id='settingsTab' href="settings.html"><img src="settings.png" alt="Settings" width='30'></a>
+            </footer>
+        </section>
+    </main>
 
-      <script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script>
         // Initialize Firebase
-          var config = {
+        var config = {
             apiKey: "AIzaSyDP_CoE19cpx33Qj-4OS8agLhwWqU4dQjg",
             authDomain: "out-of-the-shadows.firebaseapp.com",
             databaseURL: "https://out-of-the-shadows.firebaseio.com",
             storageBucket: "out-of-the-shadows.appspot.com",
             messagingSenderId: "402671311503"
-          };
-          // Get a reference to the database service
-          var database = firebase.database();
-          firebase.initializeApp(config);
+        };
+        // Get a reference to the database service
+        var database = firebase.database();
+        firebase.initializeApp(config);
+    </script>
 
-      </script>
 
-      <script>
-      //for Google maps, looks for function with initMap to initialize
+    <script>
+        // for Google maps, looks for function with initMap to initialize
         function initMap() {
-          var uluru = {lat: 38.53769, lng: -121.76777};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 14,
-            center: uluru
-          });
-          // var marker = new google.maps.Marker({
-          //   position: uluru,
-          //   map: map
-          // });
+            var uluru = {
+                lat: 38.53769,
+                lng: -121.76777
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: uluru
+            });
+            // var marker = new google.maps.Marker({
+            //   position: uluru,
+            //   map: map
+            // });
         }
+    </script>
+    <script type="text/javascript" src="map.js"></script>
 
-      </script>
+</body>
 
-    </main>
-  </body>
 </html>

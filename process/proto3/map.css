@@ -16,7 +16,44 @@ main{
   margin: auto;
   margin-top: 118px;
 }
-h1 {
+aside{
+  height:95%;
+  width:95%;
+  /*border: solid;
+  border-color: #fff;
+  margin: auto;
+  margin-top: 118px;*/
+  background-image: url(loading2.png);
+  background-size: 375px;
+}
+
+#startInfo{
+  font-size: 18px;
+  font-family: 'Raleway', san-serif;
+  font-weight: 400;
+  color: #fff;
+  width: 280px;
+  margin-left: 50px;
+  /*margin-top:380px;*/
+  margin-bottom: 60px;
+}
+
+.button{
+  padding: 15px 30px 15px 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #328c94;
+  background-color: #fff;
+  font-size: 30px;
+  border-radius: 8px;
+  border: solid;
+  border-width: 2px;
+  border-left: gray;
+  border-top: gray;
+}
+
+#title {
 	text-transform: uppercase;
 	font-size: 35px;
 	font-family: 'Covered By Your Grace', cursive;
