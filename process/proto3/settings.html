@@ -11,16 +11,27 @@
   <body>
     <main>
       <h1>Out of the Shadows</h1>
+      <article>
+  			<form name="f">
+  				<section class="location">
+            <label>default location:</label>
+            <input id='location' name="userDate" type="text" required>
+  				</section>
+          <section class='submit'>
+            <input id='submit' type="submit" name="submit" value="save">
+          </section>
+        </form>
+      </article>
 
       <section id=buttons>
-      <h2>Alert Radius</h2>
-        <button type="button" name="alertRadius1">1 Mile</button>
-        <button type="button" name="alertRadius5">5 Miles</button>
-        <button type="button" name="alertRadius10">10 Miles</button>
-      <h2>Report Time Frame</h2>
-        <button type="button" name="reportTime1">1 Hour</button>
-        <button type="button" name="reportTime24">24 Hours</button>
-        <button type="button" name="reportTime48">48 Hours</button>
+      <h2>alert radius:</h2>
+        <button class="button" type="button" id="alertRadius1">1 Mile</button>
+        <button class="button" type="button" id="alertRadius5">5 Miles</button>
+        <button class="button" type="button" id="alertRadius10">10 Miles</button>
+      <h2 id=reportTime>report time frame:</h2>
+        <button class="button" type="button" id="reportTime1">1 Hour</button>
+        <button class="button" type="button" id="reportTime24">24 Hours</button>
+        <button class="button" type="button" id="reportTime48">48 Hours</button>
       </section>
 
       <footer>
