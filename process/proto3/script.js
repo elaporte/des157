@@ -21,11 +21,4 @@ document.addEventListener("DOMContentLoaded", function() {
       };
 
     }
-// Public access to data
-    {
-      "rules": {
-        ".read": true,
-        ".write": true
-      }
-    }
 });
