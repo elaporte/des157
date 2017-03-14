@@ -6,34 +6,68 @@
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="map.css">
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap"></script>
-
-
-
     <title>Interactive Prototype 3 Map</title>
 </head>
 
 <body>
     <main>
-        <aside id="start" style="display: none;">
+        <!-- <aside id="start" style="display: none;"> -->
+        <aside id="start">
             <h2 id="startInfo">Create a safer community by anonymously reporting a spectrum of sexual assault that helps you and people around you stay safe.</h2>
             <button type="button" class="button" id="go">GO</button>
         </aside>
 
         <!-- <section id="mapPage" style="display: none;"> -->
-          <section id="mapPage">
-            <h1 id="title">Out of the Shadows</h1>
+        <section id="mapPage" style="opacity:0;">
+            <h1 class="title">Out of the Shadows</h1>
             <div id="map"></div>
-
             <!--https://www.w3schools.com/tags/canvas_arc.asp-->
+            <canvas id="myCanvas2" width="300" height="150"></canvas>
             <canvas id="myCanvas" width="300" height="150"></canvas>
 
-            <footer>
+            <!-- <footer>
                 <a class='tabs' id='reportTab' href="report.html"><img src="edit.png" alt="Report" width='30'></a>
                 <a class='tabs' id='mapTab' href="#"><img src="placeholder.png" alt="Map" width='30'></a>
                 <a class='tabs' id='settingsTab' href="settings.html"><img src="settings.png" alt="Settings" width='30'></a>
-            </footer>
+            </footer> -->
+        </section>
+
+        <section id="reportPage" style="display:none;">
+            <h1 class="title">Out of the Shadows</h1>
+            <!--User selects categories-->
+            <article id='categories'>
+                <button class="button2" id="catcall">catcall</button>
+                <button class="button2" id="rape">rape/<br>assault</button>
+                <button class="button2" id="stalk">stalking</button>
+                <button class="button2" id="grope">groping/<br>touching</button>
+                <button class="button2" id="pics">taking<br>pictures</button>
+                <button class="button2" id="exposure">indecent<br>exposure</button>
+                <button class="button2" id="stare">staring</button>
+                <button class="button2" id="invite">sexual<br>invites</button>
+                <button class="button2" id="other">other</button>
+            </article>
+
+            <!--User text input for date, time, location-->
+            <article id='upperInfo'>
+                <form name="f">
+                    <section class="td">
+                        <input id='date' name="userDate" type="text" placeholder="date" required>
+                    </section>
+                    <section class='td'>
+                        <input id='time' name="userTime" type="text" placeholder="time" required>
+                    </section>
+                    <section class='td'>
+                        <input id='loc' name="userLocation" type="text" placeholder="location" required>
+                    </section>
+                    <section class="bottom" id='write'>
+                        <input id='desc' name="description" type="text" placeholder="optional description">
+                    </section>
+                    <section class="bottom" id='send'>
+                        <input id="submit" type="submit" value="submit" />
+                    </section>
+                </form>
+            </article>
         </section>
     </main>
 
@@ -47,8 +81,6 @@
             storageBucket: "out-of-the-shadows.appspot.com",
             messagingSenderId: "402671311503"
         };
-        // Get a reference to the database service
-        var database = firebase.database();
         firebase.initializeApp(config);
     </script>
 

@@ -18,13 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log('why yes it did');
 
-        /* Public access to data
-            {
-              "rules": {
-                ".read": true,
-                ".write": true
-              }
-            }*/
         return false;
     };
 

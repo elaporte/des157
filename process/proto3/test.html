@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      body{
-        width: 375px;
-      }
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
+    <meta charset="utf-8">
+    <script src="test.js" type="text/javascript"></script>
+    <title>Test</title>
   </head>
+  <style>
+    body{
+      height: 667px;
+      width: 375px;
+    }
+    #map{
+      height: 600px;
+      width: 375px;
+    }
+  </style>
   <body>
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap">
-    </script>
+      <section id=loading>
+        <img src="loading2.png" alt="loading" width="375">
+      </section>
+      <section id=report>
+        <img src="loading.png" alt="loading2" width="375">
+      </section>
+      <section id=map>
+      </section>
   </body>
 </html>
