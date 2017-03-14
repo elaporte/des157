@@ -1,20 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-body {
-    background-image: url(iphone6.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 900px;
+body{
+  background-image: url(iphone6.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size:900px;
 }
-
-main {
-    height: 667px;
-    width: 375px;
-    margin: auto;
-    margin-top: 118px;
+main{
+  height:667px;
+  width:375px;
+  border: solid;
+	border-color: #fff;
+  margin: auto;
+  margin-top: 118px;
 }
 
 
