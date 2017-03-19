@@ -6,20 +6,20 @@
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="map.css">
-    <script src="map.js" type="text/javascript"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap"></script>
     <title>Interactive Prototype 3 Map</title>
 </head>
 
 <body>
     <main>
+        <!-- LOADING PAGE -->
         <aside id="loadingPage">
             <!-- <aside id="start"> -->
             <h2 id="startInfo">Create a safer community by anonymously reporting a spectrum of sexual assault that helps you and people around you stay safe.</h2>
             <button type="button" class="button" id="go">GO</button>
         </aside>
 
-        <!-- <section id="mapPage" style="display: none;"> -->
+        <!-- MAP SECTION -->
         <section id="mapPage" style="opacity:0;">
             <img src="header.png" alt="header" width="375" height="45">
             <div id="map"></div>
@@ -29,104 +29,58 @@
                 <input id="latlng" type="text" value="38.5393669,-121.7525007" style="display:none">
                 <input id="submit" type="button" value="Submit Report">
             </div> -->
+        </section>
 
-            <!-- REPORTING SECTION -->
-            <section id="reportPage" style="opacity:0;">
-            <!-- User selects categories -->
-                <article id='categories'>
-                    <button class="button2" id="catcall">catcall</button>
-                    <button class="button2" id="rape">rape/<br>assault</button>
-                    <button class="button2" id="stalk">stalking</button>
-                    <button class="button2" id="grope">groping/<br>touching</button>
-                    <button class="button2" id="pics">taking<br>pictures</button>
-                    <button class="button2" id="exposure">indecent<br>exposure</button>
-                    <button class="button2" id="stare">staring</button>
-                    <button class="button2" id="invite">sexual<br>invites</button>
-                    <!-- <button class="button2" id="other">other</button> -->
-                </article>
+        <!-- REPORTING SECTION -->
+        <section id="reportPage" style="opacity:0;">
+        <!-- User selects categories -->
+            <article id='categories'>
+                <button class="button2" id="catcall">catcall</button>
+                <button class="button2" id="rape">rape/<br>assault</button>
+                <button class="button2" id="stalk">stalking</button>
+                <button class="button2" id="grope">groping/<br>touching</button>
+                <button class="button2" id="pics">taking<br>pictures</button>
+                <button class="button2" id="exposure">indecent<br>exposure</button>
+                <button class="button2" id="stare">staring</button>
+                <button class="button2" id="invite">sexual<br>invites</button>
+                <!-- <button class="button2" id="other">other</button> -->
+            </article>
 
-            <!--User text input for date, time, location-->
-                <article id='upperInfo'>
-                    <form name="f">
-                      <!--  <section class="td">
-                            <input id='date' name="userDate" type="text" placeholder="date" required>
-                        </section>
-                        <section class='td'>
-                            <input id='time' name="userTime" type="text" placeholder="time" required>
-                        </section>
-                        <section class='td'>
-                            <input id='loc' name="userLocation" type="text" placeholder="location" required>
-                        </section> -->
-                        <section class="bottom" id='write'>
-                            <input id='desc' name="description" type="text" placeholder="optional description">
-                        </section>
-                        <section class="bottom" id='send'>
-                            <input id="submitForm" type="submit" value="submit" />
-                        </section>
-                    </form>
-                </article>
-            </section>
+        <!--User text input for date, time, location-->
+            <article id='upperInfo'>
+                  <!--  <section class="td">
+                        <input id='date' name="userDate" type="text" placeholder="date" required>
+                    </section>
+                    <section class='td'>
+                        <input id='time' name="userTime" type="text" placeholder="time" required>
+                    </section>
+                    <section class='td'>
+                        <input id='loc' name="userLocation" type="text" placeholder="location" required>
+                    </section> -->
+                    <section class="bottom" id='write'>
+                        <textarea id="desc" placeholder="optional description"></textarea>
+                    </section>
+                    <section class="bottom" id='send'>
+                        <button id="submitForm">submit</button>
+                    </section>
+            </article>
         </section>
     </main>
-    <script type="text/javascript">
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: {
-                    lat: 38.5382363,
-                    lng: -121.7476284
-                }
-            });
-          }
-        //     var geocoder = new google.maps.Geocoder;
-        //     var infowindow = new google.maps.InfoWindow;
-        //
-        //     document.getElementById('submit').addEventListener('click', function() {
-        //         geocodeLatLng(geocoder, map, infowindow);
-        //     });
-        // }
-        //
-        // function geocodeLatLng(geocoder, map, infowindow) {
-        //     var input = document.getElementById('latlng').value;
-        //     var latlngStr = input.split(',', 2);
-        //     var latlng = {
-        //         lat: parseFloat(latlngStr[0]),
-        //         lng: parseFloat(latlngStr[1])
-        //     };
-        //     geocoder.geocode({
-        //         'location': latlng
-        //     }, function(results, status) {
-        //         if (status === 'OK') {
-        //             if (results[1]) {
-        //                 map.setZoom(16);
-        //                 var marker = new google.maps.Marker({
-        //                     position: latlng,
-        //                     map: map
-        //                 });
-        //                 infowindow.setContent(results[1].formatted_address);
-        //                 infowindow.open(map, marker);
-        //             } else {
-        //                 window.alert('No results found');
-        //             }
-        //         } else {
-        //             window.alert('Geocoder failed due to: ' + status);
-        //         }
-        //     });
-        // }
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
     <script>
-        var config = {
-          apiKey: "AIzaSyDP_CoE19cpx33Qj-4OS8agLhwWqU4dQjg",
-          authDomain: "out-of-the-shadows.firebaseapp.com",
-          databaseURL: "https://out-of-the-shadows.firebaseio.com",
-          storageBucket: "out-of-the-shadows.appspot.com",
-          messagingSenderId: "402671311503"
-        };
-        // Get a reference to the database service
-        var database = firebase.database();
-        firebase.initializeApp(config);
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDP_CoE19cpx33Qj-4OS8agLhwWqU4dQjg",
+        authDomain: "out-of-the-shadows.firebaseapp.com",
+        databaseURL: "https://out-of-the-shadows.firebaseio.com",
+        storageBucket: "out-of-the-shadows.appspot.com",
+        messagingSenderId: "402671311503"
+      };
+      firebase.initializeApp(config);
     </script>
+    <script src="map.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -167,6 +167,7 @@ main{
   top:-590px;
   border-radius: 6px;
   padding-top: 10px;
+  border: 5px solid #4cd4e1;
 }
 #categories {
     margin-bottom: 20px;
@@ -194,7 +195,7 @@ article {
     font-size: 12px;
 }
 
-input[type="text"] {
+#desc {
     padding: 8px;
     border-radius: 5px;
     border: solid;
@@ -235,7 +236,7 @@ input[type="text"] {
     clear: both;
 }
 
-input[type="submit"] {
+#submitForm{
     padding: 15px;
     border: none;
     border-radius: 3px;
