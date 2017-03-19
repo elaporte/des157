@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         loadingPage.style.display = "none";
         mapPage.style.opacity = 1;
     });
+    console.log("checkpoint 1");
 
     // var reportPage = document.getElementById("reportPage");
     var submitReport = document.getElementById("submitReport");
@@ -20,20 +21,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
         reportPage.style.opacity = 1;
         mapPage.style.opacity = 0.2;
     });
-
+      console.log("checkpoint 2");
     var mainText = document.getElementById("desc");
     var submitForm = document.getElementById("submitForm");
 
-    submitForm.addEventListener("click", submitClick());
+    //submitForm.addEventListener("click", submitClick());
 
-      function submitClick() {
-      // Get a reference to the database service
-      var firebaseRef = firebase.database().ref();
+    submitForm.addEventListener("click", function(event) {
+      reportPage.style.opacity = 0;
+      mapPage.style.opacity = 1;
+    });
 
-      var messageText = mainText.value;
+  console.log("checkpoint 3");
 
-      firebaseRef.push().set(messageText);
-    }
+  function submitClick() {
+
+        window.alert("submit button check");
+    //   // Get a reference to the database service
+    //   var firebaseRef = firebase.database().ref();
+    //
+    //   var messageText = mainText.value;
+    //
+    //   firebaseRef.child("text").set("another value");
+    //   console.log("checkpoint 3.5");
+    //   return false;
+     }
 
 // ---------- spencer's code --------------
     // submitForm.addEventListener("click", function(event) {
@@ -122,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // //     return false;
     // // };
     //
+    console.log("checkpoint 4");
     var catcall = document.getElementById('catcall');
     catcall.addEventListener('mousedown', function() {
         console.log('mousedown on catcall');
@@ -193,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     invite.addEventListener("dblclick", function() {
         invite.style.backgroundColor = '#4cd4e1';
     });
+    console.log("checkpoint 5");
 
     // var other = document.getElementById('other');
     // other.addEventListener('mousedown', function () {
@@ -213,4 +227,5 @@ function initMap() {
             lng: -121.7476284
         }
     });
+  console.log("checkpoint 6");
 }
