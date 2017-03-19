@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="style.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&callback=initMap"></script>
     <title>Interactive Prototype 3 Map</title>
 </head>
@@ -61,7 +61,7 @@
                         <textarea id="desc" placeholder="optional description"></textarea>
                     </section>
                     <section class="bottom" id='send'>
-                        <button id="submitForm">submit</button>
+                        <button id="submitForm" onclick="submitClick()">submit</button>
                     </section>
             </article>
         </section>
@@ -83,7 +83,7 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="map.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>

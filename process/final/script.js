@@ -25,20 +25,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var mainText = document.getElementById("desc");
     var submitForm = document.getElementById("submitForm");
 
-    submitForm.addEventListener("click", submitClick);
+    //submitForm.addEventListener("click", submitClick());
 
     submitForm.addEventListener("click", function(event) {
       reportPage.style.opacity = 0;
       mapPage.style.opacity = 1;
     });
 
+  console.log("checkpoint 3");
+
   function submitClick() {
-      //window.alert("submit button check");
+
+        window.alert("submit button check");
       // Get a reference to the database service
       var firebaseRef = firebase.database().ref();
+
       var messageText = mainText.value;
-      firebaseRef.push().set(messageText);
-      console.log("checkpoint 3");
+
+      firebaseRef.child("text").set("another value");
+      console.log("checkpoint 3.5");
       return false;
      }
 
