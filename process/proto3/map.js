@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     console.log('Icons made by http://www.freepik.com. Freepik from www.flaticon.com is licensed by http://creativecommons.org/licenses/by/3.0/ Creative Commons BY 3.0 CC 3.0 BY');
 
+    //var firebase = new Firebase("https://out-of-the-shadows.firebaseio.com");
+
     var go = document.getElementById("go");
     var loadingPage = document.getElementById("loadingPage");
     var mapPage = document.getElementById("mapPage");
@@ -13,122 +15,142 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     console.log("checkpoint 1");
 
-    // var reportPage = document.getElementById("reportPage");
     var submitReport = document.getElementById("submitReport");
-    //console.log(submitReport.className);
 
     submitReport.addEventListener("click", function(event) {
         reportPage.style.opacity = 1;
         mapPage.style.opacity = 0.2;
     });
-      console.log("checkpoint 2");
-    var mainText = document.getElementById("desc");
+    console.log("checkpoint 2");
+
     var submitForm = document.getElementById("submitForm");
 
-    submitForm.addEventListener("click", submitClick);
-
     submitForm.addEventListener("click", function(event) {
-      reportPage.style.opacity = 0;
-      mapPage.style.opacity = 1;
+        reportPage.style.display = "none";
+        mapPage.style.opacity = 1;
     });
 
-  function submitClick() {
-      //window.alert("submit button check");
-      // Get a reference to the database service
-      var firebaseRef = firebase.database().ref();
-      var messageText = mainText.value;
-      firebaseRef.push().set(messageText);
-      console.log("checkpoint 3");
-      return false;
-     }
+    submitForm.addEventListener("click", function(event) {
+        if ("geolocation" in navigator) {
+            console.log('geolocation is available');
+            navigator.geolocation.getCurrentPosition(success);
 
-// ---------- spencer's code --------------
-    // submitForm.addEventListener("click", function(event) {
-    //     if ("geolocation" in navigator) {
-    //         console.log('geolocation is available');
-    //         navigator.geolocation.getCurrentPosition(success);
-    //
-    //     } else {
-    //         console.log('geolocation IS NOT available');
-    //     }
-    //     event.preventDefault();
-    // });
-    //
-    // function success(position) {
-    //     console.log('Your current position is:' +
-    //         '\nlatitude:  ' + position.coords.latitude +
-    //         '\nlongitude: ' + position.coords.longitude +
-    //         '\ntimestamp: ' + position.timestamp);
-    //     // console.log('Your current position is:');
-    //     // console.log(`Latitude : ${position.coords.latitude}`);
-    //     // console.log(`Longitude: ${position.coords.longitude}`);
-    //     // console.log(`More or less ${position.coords.accuracy} meters.`);
-    //
-    //     var latitude = position.coords.latitude;
-    //     var longitude = position.coords.longitude;
-    //     var timestamp = position.timestamp;
-    //
-    //     alert('Your report has been submitted at the location ' + latitude + ', ' + longitude + ' at time ' + timestamp + '.')};
+        } else {
+            console.log('geolocation IS NOT available');
+        }
+        event.preventDefault();
+    });
+
+    var date_format = '12'; /* FORMAT CAN BE 12 hour (12) OR 24 hour (24)*/
 
 
+    var d = new Date();
+    var hour = d.getHours(); /* Returns the hour (from 0-23) */
+    var minutes = d.getMinutes(); /* Returns the minutes (from 0-59) */
+    var result = hour;
+    var ext = '';
 
-        // function writeUserData(lat, lon, time) {
-        //   var latitude = position.coords.latitude;
-        //   var longitude = position.coords.longitude;
-        //   var timestamp = position.timestamp;
-        //     firebase.database().ref('report').set({
-        //         lat: latitude,
-        //         lon: longitude,
-        //         time: timestamp
-        //     });
-        // }
-        // var userReportRef = firebase.database().ref('report/');
-        // userReportRef.on('value', function(snapshot) {
-        //     updateUserReport(postElement, snapshot.val());
+    if (date_format == '12') {
+        if (hour > 12) {
+            ext = 'PM';
+            hour = (hour - 12);
+
+            if (hour < 10) {
+                result = "0" + hour;
+            } else if (hour == 12) {
+                hour = "00";
+                ext = 'AM';
+            }
+        } else if (hour < 12) {
+            result = ((hour < 10) ? "0" + hour : hour);
+            ext = 'AM';
+        } else if (hour == 12) {
+            ext = 'PM';
+        }
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    result = result + ":" + minutes + ' ' + ext;
+
+    function success(position) {
+        console.log('Your current position is:' +
+            '\nlatitude:  ' + position.coords.latitude +
+            '\nlongitude: ' + position.coords.longitude +
+            '\ntimestamp: ' + position.timestamp);
+
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        var timestamp = position.timestamp;
+
+        // Get a reference to the database service
+        var firebaseRef = firebase.database().ref();
+        var mainText = document.getElementById("desc");
+        var messageText = mainText.value;
+
+        var data = {
+            description: messageText,
+            timestamp: timestamp,
+            lat: latitude,
+            lng: longitude
+        };
+
+        var myLatlng = new google.maps.LatLng(latitude, longitude);
+        var mapOptions = {
+            zoom: 16,
+            center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title: "A report was submitted at " + result + "  with description: "+ messageText 
+        });
+
+        // To add the marker to the map, call setMap();
+        marker.setMap(map);
+
+
+        // var circle = new google.maps.Circle({
+        //   data: data,
+        //   strokeColor: '#FF0000',
+        //   strokeOpacity: 0.8,
+        //   strokeWeight: 2,
+        //   fillColor: '#FF0000',
+        //   fillOpacity: 0.35
         // });
         //
-        // var newRef = {
-        //   lat: latitude,
-        //   lon: longitude,
-        //   time: timestamp
-        // };
-        //
-        // var newPostKey = firebase.database().ref.child('report').push().key;
-        // // var newRef = firebase.database.ref).child('report').push();
-        // var updates = {};
-        // updates['/report/' + newPostKey] = newRef;
-        //
-        // return firebase.database().ref().updates(updates);
-    // window.onload = function () { initialize() };
+        //  circle.setMap(map);
 
-    // mapPage.style.display = "none";
-    // reportPage.style.display = "block";
-    // submit.addEventListener("click", function(event) {
-    //     reportPage.style.display = "none";
-    //     mapPage.style.display = "block";
-    // });
+        firebaseRef.push().set(data);
+        console.log("checkpoint 3");
+        console.log(messageText, latitude, longitude, timestamp);
+
+        return false;
+    }
 
 
-    // document.f.onsubmit = processForm;
-    // // console.log('and here?')
+
+    //     map.data.setStyle(function(feature) {
+    //         return {
+    //             icon: getCircle()
+    //         };
+    //     });
     //
-    // function processForm() {
-
-    // //     console.log('how about now?');
-    // //     //store user name in a variable
-    // //     var time = document.f.userTime.value;
-    // //     console.log('and now?');
-    // //     var date = document.f.userDate.value;
-    // //     console.log('maybe now?');
-    // //     var location = document.f.userLocation.value;
-    // //     console.log('cmon now?');
-    // //     alert('Report submitted for '  date  ' at '  time  ' at '  location  '. Thank you for sharing your story.');
-    // //
-    // //     console.log('why yes it did');
-    // //
-    // //     return false;
-    // // };
     //
+    // function getCircle() {
+    //     return {
+    //         path: google.maps.SymbolPath.CIRCLE,
+    //         fillColor: 'red',
+    //         fillOpacity: .2,
+    //         scale: Math.pow(2, magnitude) / 2,
+    //         strokeColor: 'white',
+    //         strokeWeight: .5
+    //     };
+    // }
+
     console.log("checkpoint 4");
     var catcall = document.getElementById('catcall');
     catcall.addEventListener('mousedown', function() {
@@ -202,25 +224,67 @@ document.addEventListener("DOMContentLoaded", function(event) {
         invite.style.backgroundColor = '#4cd4e1';
     });
     console.log("checkpoint 5");
-
-    // var other = document.getElementById('other');
-    // other.addEventListener('mousedown', function () {
-    //     console.log('mousedown on other');
-    //     other.style.backgroundColor = '#328c94';
-    // });
-    // other.addEventListener("dblclick", function() {
-    //   other.style.backgroundColor = '#4cd4e1';
-    // });
-
 });
 
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: {
-            lat: 38.5382363,
-            lng: -121.7476284
-        }
-    });
-  console.log("checkpoint 6");
-}
+//
+//     alert('Your report has been submitted at the location ' + latitude + ', ' + longitude + ' at time ' + timestamp + '.')};
+
+
+
+// function writeUserData(lat, lon, time) {
+//   var latitude = position.coords.latitude;
+//   var longitude = position.coords.longitude;
+//   var timestamp = position.timestamp;
+//     firebase.database().ref('report').set({
+//         lat: latitude,
+//         lon: longitude,
+//         time: timestamp
+//     });
+// }
+// var userReportRef = firebase.database().ref('report/');
+// userReportRef.on('value', function(snapshot) {
+//     updateUserReport(postElement, snapshot.val());
+// });
+//
+// var newRef = {
+//   lat: latitude,
+//   lon: longitude,
+//   time: timestamp
+// };
+//
+// var newPostKey = firebase.database().ref.child('report').push().key;
+// // var newRef = firebase.database.ref).child('report').push();
+// var updates = {};
+// updates['/report/' + newPostKey] = newRef;
+//
+// return firebase.database().ref().updates(updates);
+// window.onload = function () { initialize() };
+
+// mapPage.style.display = "none";
+// reportPage.style.display = "block";
+// submit.addEventListener("click", function(event) {
+//     reportPage.style.display = "none";
+//     mapPage.style.display = "block";
+// });
+
+
+// document.f.onsubmit = processForm;
+// // console.log('and here?')
+//
+// function processForm() {
+
+// //     console.log('how about now?');
+// //     //store user name in a variable
+// //     var time = document.f.userTime.value;
+// //     console.log('and now?');
+// //     var date = document.f.userDate.value;
+// //     console.log('maybe now?');
+// //     var location = document.f.userLocation.value;
+// //     console.log('cmon now?');
+// //     alert('Report submitted for '  date  ' at '  time  ' at '  location  '. Thank you for sharing your story.');
+// //
+// //     console.log('why yes it did');
+// //
+// //     return false;
+// // };
+//
