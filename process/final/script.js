@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        var icon = 'http://maps.google.com/mapfiles/kml/pal3/icon49.png';
+        var icon = 'https://maps.google.com/mapfiles/kml/pal3/icon49.png';
 
         var marker = new google.maps.Marker({
             position: myLatlng,
