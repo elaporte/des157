@@ -41,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         event.preventDefault();
     });
 
+    //-------- 12 hour timer --------
     var date_format = '12'; /* FORMAT CAN BE 12 hour (12) OR 24 hour (24)*/
-
-
     var d = new Date();
     var hour = d.getHours(); /* Returns the hour (from 0-23) */
     var minutes = d.getMinutes(); /* Returns the minutes (from 0-59) */
@@ -74,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     result = result + ":" + minutes + ' ' + ext;
+    // ---------- End 12 hour time function
 
     function success(position) {
         console.log('Your current position is:' +
@@ -101,190 +101,176 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var mapOptions = {
             zoom: 16,
             center: myLatlng
-        }
+        };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var icon = 'http://maps.google.com/mapfiles/kml/pal3/icon49.png';
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title: "A report was submitted at " + result + "  with description: "+ messageText 
+            icon: icon,
+        });
+
+        var contentString = "A " + clicked + " report was submitted at " + result + "  with description: "+ messageText;
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 200
+          });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
         });
 
         // To add the marker to the map, call setMap();
         marker.setMap(map);
-
-
-        // var circle = new google.maps.Circle({
-        //   data: data,
-        //   strokeColor: '#FF0000',
-        //   strokeOpacity: 0.8,
-        //   strokeWeight: 2,
-        //   fillColor: '#FF0000',
-        //   fillOpacity: 0.35
-        // });
-        //
-        //  circle.setMap(map);
 
         firebaseRef.push().set(data);
         console.log("checkpoint 3");
         console.log(messageText, latitude, longitude, timestamp);
 
         return false;
-    }
 
-
-
-    //     map.data.setStyle(function(feature) {
-    //         return {
-    //             icon: getCircle()
-    //         };
-    //     });
-    //
-    //
-    // function getCircle() {
-    //     return {
-    //         path: google.maps.SymbolPath.CIRCLE,
-    //         fillColor: 'red',
-    //         fillOpacity: .2,
-    //         scale: Math.pow(2, magnitude) / 2,
-    //         strokeColor: 'white',
-    //         strokeWeight: .5
-    //     };
-    // }
+      }
 
     console.log("checkpoint 4");
     var catcall = document.getElementById('catcall');
-    catcall.addEventListener('mousedown', function() {
-        console.log('mousedown on catcall');
+    catcall.addEventListener('click', function() {
+        console.log('click on catcall');
         catcall.style.backgroundColor = '#328c94';
     });
     catcall.addEventListener("dblclick", function() {
         catcall.style.backgroundColor = '#4cd4e1';
     });
+  //   catcall.addEventListener("click", category);
+  //   function category() {
+  //   if (catcall.style.backgroundColor = '#328c94') {
+  //       return catcall.value;
+  //   } else {
+  //     console.log(null);
+  //   }
+  // }
 
     var rape = document.getElementById('rape');
-    rape.addEventListener('mousedown', function() {
-        console.log('mousedown on rape');
+    rape.addEventListener('click', function() {
+        console.log('click on rape');
         rape.style.backgroundColor = '#328c94';
     });
     rape.addEventListener("dblclick", function() {
         rape.style.backgroundColor = '#4cd4e1';
     });
+    rape.addEventListener("click", category);
+    function category() {
+    if (rape.style.backgroundColor = '#328c94') {
+      console.log('rape');
+    } else {
+      console.log(null);
+    }
+  }
 
     var stalk = document.getElementById('stalk');
-    stalk.addEventListener('mousedown', function() {
-        console.log('mousedown on stalk');
+    stalk.addEventListener('click', function() {
+        console.log('click on stalk');
         stalk.style.backgroundColor = '#328c94';
     });
     stalk.addEventListener("dblclick", function() {
         stalk.style.backgroundColor = '#4cd4e1';
     });
+    stalk.addEventListener("click", category);
+    function category() {
+    if (stalk.style.backgroundColor = '#328c94') {
+      console.log('stalk');
+    } else {
+      console.log(null);
+    }
+  }
 
     var grope = document.getElementById('grope');
-    grope.addEventListener('mousedown', function() {
-        console.log('mousedown on grope');
+    grope.addEventListener('click', function() {
+        console.log('click on grope');
         grope.style.backgroundColor = '#328c94';
     });
     grope.addEventListener("dblclick", function() {
         grope.style.backgroundColor = '#4cd4e1';
     });
+    grope.addEventListener("click", category);
+    function category() {
+    if (grope.style.backgroundColor = '#328c94') {
+      console.log('grope');
+    } else {
+      console.log(null);
+    }
+  }
 
     var pics = document.getElementById('pics');
-    pics.addEventListener('mousedown', function() {
-        console.log('mousedown on pics');
+    pics.addEventListener('click', function() {
+        console.log('click on pics');
         pics.style.backgroundColor = '#328c94';
     });
     pics.addEventListener("dblclick", function() {
         pics.style.backgroundColor = '#4cd4e1';
     });
+    pics.addEventListener("click", category);
+    function category() {
+    if (pics.style.backgroundColor = '#328c94') {
+      console.log('pics');
+    } else {
+      console.log(null);
+    }
+  }
 
     var exposure = document.getElementById('exposure');
-    exposure.addEventListener('mousedown', function() {
-        console.log('mousedown on exposure');
+    exposure.addEventListener('click', function() {
+        console.log('click on exposure');
         exposure.style.backgroundColor = '#328c94';
     });
     exposure.addEventListener("dblclick", function() {
         exposure.style.backgroundColor = '#4cd4e1';
     });
+    exposure.addEventListener("click", category);
+    function category() {
+    if (exposure.style.backgroundColor = '#328c94') {
+      console.log('exposure');
+    } else {
+      console.log(null);
+    }
+  }
 
     var stare = document.getElementById('stare');
-    stare.addEventListener('mousedown', function() {
-        console.log('mousedown on stare');
+    stare.addEventListener('click', function() {
+        console.log('click on stare');
         stare.style.backgroundColor = '#328c94';
     });
     stare.addEventListener("dblclick", function() {
         stare.style.backgroundColor = '#4cd4e1';
     });
+    stare.addEventListener("click", category);
+    function category() {
+    if (stare.style.backgroundColor = '#328c94') {
+      console.log('stare');
+    } else {
+      console.log(null);
+    }
+  }
 
     var invite = document.getElementById('invite');
-    invite.addEventListener('mousedown', function() {
-        console.log('mousedown on invite');
+    invite.addEventListener('click', function() {
+        console.log('click on invite');
         invite.style.backgroundColor = '#328c94';
+        return invite;
     });
     invite.addEventListener("dblclick", function() {
         invite.style.backgroundColor = '#4cd4e1';
     });
+  //   invite.addEventListener("click", category);
+  //   function category() {
+  //   if (invite.style.backgroundColor = '#328c94') {
+  //     console.log('invite');
+  //   } else {
+  //     console.log(null);
+  //   }
+  // };
     console.log("checkpoint 5");
-});
-
-//
-//     alert('Your report has been submitted at the location ' + latitude + ', ' + longitude + ' at time ' + timestamp + '.')};
 
 
-
-// function writeUserData(lat, lon, time) {
-//   var latitude = position.coords.latitude;
-//   var longitude = position.coords.longitude;
-//   var timestamp = position.timestamp;
-//     firebase.database().ref('report').set({
-//         lat: latitude,
-//         lon: longitude,
-//         time: timestamp
-//     });
-// }
-// var userReportRef = firebase.database().ref('report/');
-// userReportRef.on('value', function(snapshot) {
-//     updateUserReport(postElement, snapshot.val());
-// });
-//
-// var newRef = {
-//   lat: latitude,
-//   lon: longitude,
-//   time: timestamp
-// };
-//
-// var newPostKey = firebase.database().ref.child('report').push().key;
-// // var newRef = firebase.database.ref).child('report').push();
-// var updates = {};
-// updates['/report/' + newPostKey] = newRef;
-//
-// return firebase.database().ref().updates(updates);
-// window.onload = function () { initialize() };
-
-// mapPage.style.display = "none";
-// reportPage.style.display = "block";
-// submit.addEventListener("click", function(event) {
-//     reportPage.style.display = "none";
-//     mapPage.style.display = "block";
-// });
-
-
-// document.f.onsubmit = processForm;
-// // console.log('and here?')
-//
-// function processForm() {
-
-// //     console.log('how about now?');
-// //     //store user name in a variable
-// //     var time = document.f.userTime.value;
-// //     console.log('and now?');
-// //     var date = document.f.userDate.value;
-// //     console.log('maybe now?');
-// //     var location = document.f.userLocation.value;
-// //     console.log('cmon now?');
-// //     alert('Report submitted for '  date  ' at '  time  ' at '  location  '. Thank you for sharing your story.');
-// //
-// //     console.log('why yes it did');
-// //
-// //     return false;
-// // };
-//
+  });

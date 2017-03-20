@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link rel="stylesheet" href="map.css">
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFvkZxdG1FNErlP92ugKjLeMFqSiQYQdE&libraries=visualization&callback=initMap"></script>
     <script src="firebasemap.js"></script>
     <title>Interactive Prototype 3 Map</title>
@@ -37,14 +38,14 @@
         <section id="reportPage" style="opacity:0;">
         <!-- User selects categories -->
             <article id='categories'>
-                <button class="button2" id="catcall">catcall</button>
-                <button class="button2" id="rape">rape/<br>assault</button>
-                <button class="button2" id="stalk">stalking</button>
-                <button class="button2" id="grope">groping/<br>touching</button>
-                <button class="button2" id="pics">taking<br>pictures</button>
-                <button class="button2" id="exposure">indecent<br>exposure</button>
-                <button class="button2" id="stare">staring</button>
-                <button class="button2" id="invite">sexual<br>invites</button>
+                <button class="button2" id="catcall" value="catcall">catcall</button>
+                <button class="button2" id="rape" value="rape/assault">rape/<br>assault</button>
+                <button class="button2" id="stalk" value="stalking">stalking</button>
+                <button class="button2" id="grope" value="groping/touching">groping/<br>touching</button>
+                <button class="button2" id="pics" value="taking pictures">taking<br>pictures</button>
+                <button class="button2" id="exposure" value="indecent exposure">indecent<br>exposure</button>
+                <button class="button2" id="stare" value="staring">staring</button>
+                <button class="button2" id="invite" value="sexual invites">sexual<br>invites</button>
                 <!-- <button class="button2" id="other">other</button> -->
             </article>
 
