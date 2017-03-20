@@ -76,58 +76,66 @@ document.addEventListener("DOMContentLoaded", function(event) {
     result = result + ":" + minutes + ' ' + ext;
     // ---------- End 12 hour time function
 
-            console.log("checkpoint 4");
+    console.log("checkpoint 4");
 
-            // });
-            var catcall = document.getElementById('catcall').addEventListener("click", catcall);
-            var rape = document.getElementById('rape').addEventListener("click", rape);
-            var stalk = document.getElementById('stalk').addEventListener("click", stalk);
-            var grope = document.getElementById('grope').addEventListener("click", grope);
-            var pics = document.getElementById('pics').addEventListener("click", pics);
-            var exposure = document.getElementById('exposure').addEventListener("click", exposure);
-            var stare = document.getElementById('stare').addEventListener("click", stare);
-            var invite = document.getElementById('invite').addEventListener("click", invite);
+    // });
+    var catcall = document.getElementById('catcall').addEventListener("click", catcall);
+    var rape = document.getElementById('rape').addEventListener("click", rape);
+    var stalk = document.getElementById('stalk').addEventListener("click", stalk);
+    var grope = document.getElementById('grope').addEventListener("click", grope);
+    var pics = document.getElementById('pics').addEventListener("click", pics);
+    var exposure = document.getElementById('exposure').addEventListener("click", exposure);
+    var stare = document.getElementById('stare').addEventListener("click", stare);
+    var invite = document.getElementById('invite').addEventListener("click", invite);
 
-            var categorySelected = '';
+    var categorySelected = '';
 
-            $(document).ready(function(){
-                $("[class=button2]").css("background-color", "#4cd4e1");
-                categorySelected = 'none';
-            });
-            function catcall() {
-            	$("[id=catcall]").css("background-color", "#328c94");
-              categorySelected = 'catcalling';
-            }
-            function rape() {
-            	$("[id=rape]").css("background-color", "#328c94");
-              categorySelected = 'rape';
-            }
-            function stalk() {
-            	$("[id=stalk]").css("background-color", "#328c94");
-              categorySelected = 'stalking';
-            }
-            function grope() {
-              $("[id=grope]").css("background-color", "#328c94");
-              categorySelected = 'groping/touching';
-            }
-            function pics() {
-            	$("[id=pics]").css("background-color", "#328c94");
-              categorySelected = 'taking pictures';
-            }
-            function exposure() {
-            	$("[id=exposure]").css("background-color", "#328c94");
-              categorySelected = 'indecent exposure';
-            }
-            function stare() {
-            	$("[id=stare]").css("background-color", "#328c94");
-              categorySelected = 'staring';
-            }
-            function invite() {
-            	$("[id=invite]").css("background-color", "#328c94");
-              categorySelected = 'sexual invites';
-            }
+    $(document).ready(function() {
+        $("[class=button2]").css("background-color", "#4cd4e1");
+        categorySelected = 'none';
+    });
 
-            console.log("checkpoint 5");
+    function catcall() {
+        $("[id=catcall]").css("background-color", "#328c94");
+        categorySelected = 'Catcalling';
+    }
+
+    function rape() {
+        $("[id=rape]").css("background-color", "#328c94");
+        categorySelected = 'Rape/Sexual Assault';
+    }
+
+    function stalk() {
+        $("[id=stalk]").css("background-color", "#328c94");
+        categorySelected = 'Stalking';
+    }
+
+    function grope() {
+        $("[id=grope]").css("background-color", "#328c94");
+        categorySelected = 'Groping/touching';
+    }
+
+    function pics() {
+        $("[id=pics]").css("background-color", "#328c94");
+        categorySelected = 'Taking pictures';
+    }
+
+    function exposure() {
+        $("[id=exposure]").css("background-color", "#328c94");
+        categorySelected = 'Indecent exposure';
+    }
+
+    function stare() {
+        $("[id=stare]").css("background-color", "#328c94");
+        categorySelected = 'Staring';
+    }
+
+    function invite() {
+        $("[id=invite]").css("background-color", "#328c94");
+        categorySelected = 'Sexual invites';
+    }
+
+    console.log("checkpoint 5");
 
     function success(position) {
         console.log('Your current position is:' +
@@ -168,29 +176,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
 
         var contentString = "A report was submitted here at " + result +
-        "\nDescription: "+ messageText +
-        "\nCategory: " + categorySelected;
+            "\nDescription: " + messageText +
+            "\nCategory: " + categorySelected;
 
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 200
-          });
+        });
 
         marker.addListener('click', function() {
-          infowindow.open(map, marker);
+            infowindow.open(map, marker);
         });
 
         // To add the marker to the map, call setMap();
         marker.setMap(map);
 
-        firebaseRef.push().set(data);
+        firebaseRef.child('events').push().set(data);
         console.log("checkpoint 3");
         console.log(messageText, latitude, longitude, timestamp, categorySelected);
 
+        //------------------- TEST ----------------//
         return false;
 
-      }
-      // var category = document.getElementsByClassName('button2');
-      // category.addEventListener("click", clicked);
+    }
+    // var category = document.getElementsByClassName('button2');
+    // category.addEventListener("click", clicked);
 
-  });
+});
